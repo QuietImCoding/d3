@@ -1,0 +1,13 @@
+body {
+    background: midnightblue;
+}
+
+h1 {
+    color: white;
+}
+
+.portrait {
+    cursor: pointer;
+    width: 20%;
+    height: 50%;
+}
