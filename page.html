@@ -3,9 +3,10 @@
     <title>Budget Data</title>
     <link href="styles.css" rel="stylesheet"/>
     <script src="https://d3js.org/d3.v4.min.js"></script>
+    <script src="datas.js"></script>
   </head>
   <body>
-    <h1>Eigth Year Budget Data</h1>
+    <h1>Final Year Budget Data</h1>
     <table>
       <tr>
 	<td>Total Revenues (Trillions)</td>
@@ -18,8 +19,12 @@
       </tr>
     </table>
     <br/>
-    <img id="obama" class="portrait" alt="" src="https://files.graphiq.com/625/media/images/t2/Barack_Obama_47360.jpg"/>
-    <img id="bush" class="portrait" alt="" src="https://files.graphiq.com/625/media/images/t2/George_W._Bush_48544.jpeg"/>
-    <script src="datas.js"></script>
+    <div class="portraits">
+      <img id="obama" class="portrait" alt="" src="https://files.graphiq.com/625/media/images/t2/Barack_Obama_47360.jpg"/>
+      <img id="bush" class="portrait" alt="" src="https://files.graphiq.com/625/media/images/t2/George_W._Bush_48544.jpeg"/>
+      <img id="clinton" class="portrait" alt="" src="https://files.graphiq.com/625/media/images/t2/Bill_Clinton_13281641.jpg"/>
+      <img id="hwbush" class="portrait" alt="" src="https://files.graphiq.com/625/media/images/t2/George_H._W._Bush_48565.jpeg"/>
+    </div>
+    <svg id="diagram" xlmns="http://www.w3.org/2000/svg" width="100%" height="500"></svg>
   </body>
 </html>

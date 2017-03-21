@@ -1,6 +1,0 @@
-var showdata = function(d, i, nodes) {
-    alert(nodes[i]);
-};
-
-d3.selectAll("img").on("click", function(d, i, nodes) { console.log(d); });
-
