@@ -3,13 +3,29 @@ body {
     color: white;
 }
 
-table, td {
+table {
     border: 1px solid white;
     border-radius: 10px;
+    width: 80%;
+    
+}
+
+td {
+   width: 20%;
 }
 
 .portrait {
     cursor: pointer;
-    width: 10%;
-    height: 15%;
+    width: 150px;
+    height: 150px;
+}
+
+.portraits {
+	   text-align: center;
+}
+
+#diagram {
+	 text-align: center;
+	 display: block;
+	 margin: auto;
 }

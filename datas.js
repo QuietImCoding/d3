@@ -23,11 +23,11 @@ var updateDiagram = function(i) {
 
 var setAttributes = function(selection) {
     selection.attr("cx", function(d, i) {
-	return width/5.5 * i + width/11;
+	return width/5 * i + width/10;
     })
-	.attr("cy", 250)
+	.attr("cy", 100)
     	.transition()
-	.attr("r", function(d) { return Math.abs(d) * 10; })
+	.attr("r", function(d) { return Math.abs(d) * 6; })
 	.attr("stroke", function(d, i) { return "#FFFFFF";})
 	.attr("fill", function(d) {
 	    if (d > 0) {
