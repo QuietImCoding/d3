@@ -11,39 +11,32 @@ var showdata = function(d, i) {
 var updateDiagram = function(i) {
     var circle = svg.selectAll("circle");
     if (circle.size()==0) {
-	circle.data(diagramdata[i])
-	    .enter()
-	    .append("svg:circle")
-	    .attr("cx", function(d, i) {
-		return width/5 * i;
-	    })
-	    .attr("cy", 250)
-	    .attr("r", function(d) { return Math.abs(d) * 10; })
-	    .attr("stroke", function(d, i) { return "#FFFFFF";})
-	    .attr("fill", function(d) {
-		if (d > 0) {
-		    return "#FF0000"
-		} else {
-		    return "#000000"
-		}
-	    });
+	setAttributes(
+	    circle.data(diagramdata[i]).enter().append("svg:circle")
+	);
     } else {
-	circle.data(diagramdata[i])
-	.attr("cx", function(d, i) {
-		return width/5 * i;
-	    })
-	    .attr("cy", 250)
-	    .attr("r", function(d) { return Math.abs(d) * 10; })
-	    .attr("stroke", function(d, i) { return "#FFFFFF";})
-	    .attr("fill", function(d) {
-		if (d > 0) {
-		    return "#FF0000"
-		} else {
-		    return "#000000"
-		}
-	    });
+	setAttributes(
+	    circle.data(diagramdata[i])
+	);
     }
 };
+
+var setAttributes = function(selection) {
+    selection.attr("cx", function(d, i) {
+	return width/5 * i;
+    })
+	.attr("cy", 250)
+	.attr("r", function(d) { return Math.abs(d) * 10; })
+	.attr("stroke", function(d, i) { return "#FFFFFF";})
+	.attr("fill", function(d) {
+	    if (d > 0) {
+		return "#000000"
+	    } else {
+		return "#FF0000"
+	    }
+	});
+    
+}
 
 var updateTable = function(i) {
     var row = d3.select("#tabledata").selectAll("td");
